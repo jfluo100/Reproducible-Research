@@ -1,12 +1,14 @@
 ---
 title: "Reproducible Research, Course Project 1"
 author: "Junfeng Luo"
-output: 
+output:
+  html_document:
+    df_print: paged
   pdf_document:
-    fig_width: 6
+    fig_caption: yes
     fig_height: 6
-    fig_caption: true
-    keep_tex: true
+    fig_width: 6
+    keep_tex: yes
 ---
 
 
@@ -89,8 +91,8 @@ hist(totalStepsByDay,
 
 ### 2. Calculate and report the mean and median total number of steps taken per day
 ```{r Mean&Median}
-mean(totalStepsByDay)
-median(totalStepsByDay)
+mean(totalStepsByDay) # mean
+median(totalStepsByDay) # median
 ```
 
 
@@ -150,8 +152,8 @@ hist(newTotalStepsByDay,
 ##### Mean and Median with imputed data
 
 ```{r newMean&Median}
-mean(newTotalStepsByDay)
-median(newTotalStepsByDay)
+mean(newTotalStepsByDay) # mean
+median(newTotalStepsByDay) # median
 ```
 
 ##### If we compare the imputed data with the cleaned data used before, the differences are negligible (n.b.: only on median value). A possible explanation is the use of media values for missing values.
